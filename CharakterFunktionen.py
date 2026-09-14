@@ -38,7 +38,10 @@ def NeuerCharakter():
                 "Geschick": 10,
                 "Intelligenz": 10,
                 "Verteidigung": 10
-            }
+            },
+            "Inventar": [],
+            "LinkeHand": None,
+            "RechteHand": None
         }
 
     else:
