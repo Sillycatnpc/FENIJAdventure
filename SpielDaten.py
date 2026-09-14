@@ -6,7 +6,7 @@ Antwortmöglichkeiten = {
     "nein": {"n", "nein", "ne", "nope"}
 }
 
-Items: {
+Items = {
     "Holzschwert": {
         "Schaden": 10,
         "Wurfschaden": 5,
