@@ -7,44 +7,60 @@ Antwortmöglichkeiten = {
 }
 
 Items = {
-    #Waffen
+    ### Waffen ###
+
     "Holzschwert": {
-        "Schaden": 10,
-        "Wurfschaden": 5,
+        "Schaden": 7,
         "Haltbarkeit": 10,
-        "Wert": 15,
-        "Eigenschaften": {"brennbar"}
+        "Wert": 35,
+        "ZerfälltZu": [{"Item": "Holzstück", "Wahrscheinlichkeit": 1}, {"Item": "Holzstück", "Wahrscheinlichkeit": 0.25}],
+        "Eigenschaften": {"Brennbar"}
     },
     
     "Stupmfes Eisenschwert": {
         "Schaden": 20,
-        "Wurfschaden": 5,
-        "Haltbarkeit": 100,
-        "Wert": 75,
-        "Eigenschaften": {"Minderwertig"}
+        "Haltbarkeit": 20,
+        "Wert": 100,
+        "ZerfälltZu": [{"Item": "Eisenschrott", "Wahrscheinlichkeit": 1}, {"Item": "Eisenschrott", "Wahrscheinlichkeit": 0.25}],
+        "Eigenschaften": {}
     },
     
     "Eisenschwert": {
-        "Schaden": 10,
-        "Wurfschaden": 5,
-        "Haltbarkeit": 10,
-        "Wert": 15,
-        "Eigenschaften": {"hochwertig"}
-    },
-        "Holzschwert": {
-        "Schaden": 10,
-        "Wurfschaden": 5,
-        "Haltbarkeit": 10,
-        "Wert": 15,
+        "Schaden": 37,
+        "Haltbarkeit": 20,
+        "Wert": 200,
+        "ZerfälltZu": [{"Item": "Stumpfes Eisenschwert", "Wahrscheinlichkeit": 1}],
         "Eigenschaften": {}
     },
-    #Rüstung
+
+    ### Rüstung ###
+
+    ### Materialien ###
+
+    "Holzstück": {
+        "Schaden": 2,
+        "Haltbarkeit": 20,
+        "Wert": 8,
+        "ZerfälltZu": [],
+        "Eigenschaften": {"Brennbar"}
+    },
+
+    "Eisenschrott": {
+        "Schaden": 5,
+        "Haltbarkeit": 50,
+        "Wert": 30,
+        "ZerfälltZu": [],
+        "Eigenschaften": {}
+    },
+
+    ### Andere ###
+
     "Seil": {
         "Schaden": 2,
-        "Wurfschaden": 1,
         "Haltbarkeit": 100,
-        "Wert": 15,
-        "Eigenschaften": {"Fesseln"}
+        "Wert": 20,
+        "ZerfälltZu": [],
+        "Eigenschaften": {"Brennbar", "Fesseln"}
     }
 
 }
