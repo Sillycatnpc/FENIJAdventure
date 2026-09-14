@@ -1,13 +1,16 @@
 import json
+from pathlib import Path
 
 Antwortmöglichkeiten = {
     "ja": {"j", "y", "ja", "yes"},
     "nein": {"n", "nein", "ne", "nope"}
 }
 
+SpielStandDateipfad = Path(__file__).parent / "Spielstand.json"
+
 # Lade Charaktere aus Spielstand.json
 try:
-    with open("Spielstand.json", "r", encoding="utf-8") as Datei:
+    with open(SpielStandDateipfad, "r", encoding="utf-8") as Datei:
         Spielstand = json.load(Datei)
 
         Charaktere = Spielstand["Charaktere"]

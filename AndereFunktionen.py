@@ -1,9 +1,9 @@
-from SpielDaten import Charaktere
+from SpielDaten import Charaktere, SpielStandDateipfad
 import json
 
 # Speichere das Spiel
 def SpeichereSpiel():
-    with open("Spielstand.json", "w", encoding="utf-8") as Datei:
+    with open(SpielStandDateipfad, "w", encoding="utf-8") as Datei:
         Spielstand = {
             "Charaktere": Charaktere
         }
