@@ -7,13 +7,38 @@ Antwortmöglichkeiten = {
 }
 
 Items = {
+    #Waffen
     "Holzschwert": {
+        "Schaden": 10,
+        "Wurfschaden": 5,
+        "Haltbarkeit": 10,
+        "Wert": 15,
+        "Eigenschaften": {"brennbar"}
+    },
+    
+    "Stupmfes Eisenschwert": {
+        "Schaden": 20,
+        "Wurfschaden": 5,
+        "Haltbarkeit": 100,
+        "Wert": 75,
+        "Eigenschaften": {"Minderwertig"}
+    },
+    
+    "Eisenschwert": {
+        "Schaden": 10,
+        "Wurfschaden": 5,
+        "Haltbarkeit": 10,
+        "Wert": 15,
+        "Eigenschaften": {"hochwertig"}
+    },
+        "Holzschwert": {
         "Schaden": 10,
         "Wurfschaden": 5,
         "Haltbarkeit": 10,
         "Wert": 15,
         "Eigenschaften": {}
     },
+    #Rüstung
     "Seil": {
         "Schaden": 2,
         "Wurfschaden": 1,
@@ -21,6 +46,7 @@ Items = {
         "Wert": 15,
         "Eigenschaften": {"Fesseln"}
     }
+
 }
 
 SpielStandDateipfad = Path(__file__).parent / "Spielstand.json"
