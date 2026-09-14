@@ -1,12 +1,23 @@
-from funktionen import lade_spiel, speichere_spiel, neuer_charakter
+from SpielDaten import Charaktere, Antwortmöglichkeiten
+from AndereFunktionen import SpeichereSpiel
+from CharakterFunktionen import NeuerCharakter
+import sys
 
-spiel_daten = lade_spiel()
-charakter_liste = spiel_daten["charaktere"]
+print()
+print("### Willkommen, Passant! ###")
+print()
 
 # Wenn es keine Charaktere gibt, soll einer hinzugefügt werden
-if len(charakter_liste) == 0:
-    Charakteranzahl = int(input("Mit wievielen Charakteren willst du Spielen? 1-5: "))
-    charakter_liste.append(neuer_charakter())
-    speichere_spiel(spiel_daten)
+if len(Charaktere) == 0:
+    SollNeuesSpielErstellen = input("Kein Spielstand gefunden. Möchtest du einen neuen erstellen? ")
 
-print(charakter_liste)
+    if SollNeuesSpielErstellen.lower() in Antwortmöglichkeiten["ja"]:
+        # Charakteranzahl = int(input("Mit wievielen Charakteren willst du Spielen? 1-5: "))
+        Charaktere.append(NeuerCharakter())
+
+        SpeichereSpiel()
+    
+    else:
+        sys.exit()
+
+print(Charaktere)
