@@ -17,7 +17,7 @@ Items = {
         "Eigenschaften": {"Brennbar"}
     },
     
-    "Stupmfes Eisenschwert": {
+    "Stumpfes Eisenschwert": {
         "Schaden": 20,
         "Haltbarkeit": 20,
         "Wert": 100,
