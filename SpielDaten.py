@@ -7,63 +7,75 @@ Antwortmöglichkeiten = {
 }
 
 Items = {
-    ### Waffen ###
-
-    "Holzschwert": {
-        "Schaden": 7,
+    # ==================== WAFFEN ====================
+    "holzschwert": {
+        "Name": "Holzschwert",
+        "Kategorie": "Waffen",
+        "Wert": 15,
+        "Schaden": 10,
+        "Wurfschaden": 5,
         "Haltbarkeit": 10,
-        "Wert": 35,
-        "ZerfälltZu": [{"Item": "Holzstück", "Wahrscheinlichkeit": 1}, {"Item": "Holzstück", "Wahrscheinlichkeit": 0.25}],
-        "Eigenschaften": {"Brennbar"}
+        "MaxHaltbarkeit": 10,
+        "Eigenschaften": {"brennbar"},
+        "Beschreibung": "Ein einfaches Übungsschwert aus Holz."
     },
-    
-    "Stumpfes Eisenschwert": {
-        "Schaden": 20,
-        "Haltbarkeit": 20,
-        "Wert": 100,
-        "ZerfälltZu": [{"Item": "Eisenschrott", "Wahrscheinlichkeit": 1}, {"Item": "Eisenschrott", "Wahrscheinlichkeit": 0.25}],
-        "Eigenschaften": {}
+    "stumpfes_eisenschwert": {
+        "Name": "Stumpfes Eisenschwert",
+        "Kategorie": "Waffen",
+        "Wert": 45,
+        "Schaden": 15,
+        "Wurfschaden": 5,
+        "Haltbarkeit": 60,
+        "MaxHaltbarkeit": 100,
+        "Eigenschaften": {"minderwertig"},
+        "Beschreibung": "Eine abgenutzte Klinge, die schon bessere Tage gesehen hat."
     },
-    
-    "Eisenschwert": {
-        "Schaden": 37,
-        "Haltbarkeit": 20,
-        "Wert": 200,
-        "ZerfälltZu": [{"Item": "Stumpfes Eisenschwert", "Wahrscheinlichkeit": 1}],
-        "Eigenschaften": {}
-    },
-
-    ### Rüstung ###
-
-    ### Materialien ###
-
-    "Holzstück": {
-        "Schaden": 2,
-        "Haltbarkeit": 20,
-        "Wert": 8,
-        "ZerfälltZu": [],
-        "Eigenschaften": {"Brennbar"}
-    },
-
-    "Eisenschrott": {
-        "Schaden": 5,
-        "Haltbarkeit": 50,
-        "Wert": 30,
-        "ZerfälltZu": [],
-        "Eigenschaften": {}
-    },
-
-    ### Andere ###
-
-    "Seil": {
-        "Schaden": 2,
+    "eisenschwert": {
+        "Name": "Eisenschwert",
+        "Kategorie": "Waffen",
+        "Wert": 75,
+        "Schaden": 25,
+        "Wurfschaden": 8,
         "Haltbarkeit": 100,
+        "MaxHaltbarkeit": 100,
+        "Eigenschaften": {"hochwertig"},
+        "Beschreibung": "Eine solide, scharfe Eisenklinge."
+    },
+    # ==================== RÜSTUNG ====================
+    "lederrüstung": {
+        "Name": "Lederrüstung",
+        "Kategorie": "Rüstung",
+        "Slot": "Brust",
+        "Wert": 50,
+        "Verteidigung": 8,
+        "Haltbarkeit": 80,
+        "MaxHaltbarkeit": 80,
+        "Eigenschaften": {"leicht"},
+        "Beschreibung": "Bietet grundlegenden Schutz, ohne die Bewegung einzuschränken."
+    },
+    # ==================== TRÄNKE ====================
+    "kleiner_heiltrank": {
+        "Name": "Kleiner Heiltrank",
+        "Kategorie": "Tränke",
         "Wert": 20,
-        "ZerfälltZu": [],
-        "Eigenschaften": {"Brennbar", "Fesseln"}
+        "Heilung": 30,
+        "Stapelbar": True,
+        "MaxStapel": 10,
+        "Eigenschaften": {"verbrauchbar"},
+        "Beschreibung": "Stellt sofort 30 Lebenspunkte wieder her."
+    },
+    # ==================== SAMMELGEGENSTÄNDE & WERKZEUGE ====================
+    "seil": {
+        "Name": "Seil",
+        "Kategorie": "Sammelgegenstände",
+        "Wert": 10,
+        "Stapelbar": True,
+        "MaxStapel": 5,
+        "Eigenschaften": {"fesseln", "klettern"},
+        "Beschreibung": "Ein reißfestes Hanfseil. Nützlich zum Klettern oder Fesseln."
     }
-
 }
+
 
 SpielStandDateipfad = Path(__file__).parent / "Spielstand.json"
 
